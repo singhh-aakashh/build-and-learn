@@ -4,7 +4,7 @@
 > Designed for experienced web developers who are new to AI/ML.
 
 **Your starting point:** Comfortable with Python, REST APIs, databases, auth, async programming, deployment.
-**Already completed:** First LLM API call (Gemini) — `llm-sandbox/01-first-api-call/`
+**Already completed:** First LLM API call (`01-first-api-call`), LLM Parameter Playground (`02-parameter-playground`)
 
 **Time commitment:** ~10–14 hrs/week (1–2 hrs weekdays + 4–5 hrs weekends)
 
@@ -13,6 +13,7 @@
 ## Progress
 
 - [x] Phase 1 — First API call (`llm-sandbox/01-first-api-call/`)
+- [x] Phase 1 — Parameter playground (`llm-sandbox/02-parameter-playground/`) — temperature, top_k, top_p
 - [ ] Phase 1 — Multi-provider CLI tool
 - [ ] Phase 1 — Prompt engineering workbench
 - [ ] Phase 2 — Tool use & function calling
@@ -66,7 +67,7 @@ Before diving in, understand the spectrum:
 
 ### Project 1.1 — Multi-Provider LLM CLI Tool
 
-**Folder:** `llm-sandbox/02-llm-cli-tool/`  
+**Folder:** `llm-sandbox/03-llm-cli-tool/`  
 **Goal:** Build a CLI tool that sends prompts to OpenAI, Anthropic, and Gemini, supporting streaming, conversation history, and structured JSON output.
 
 **What you'll build:** CLI with `typer`, `--stream` flag, conversation history in JSON, `--json-schema` for structured output, provider comparison.
@@ -75,7 +76,7 @@ Before diving in, understand the spectrum:
 
 ### Project 1.2 — Prompt Engineering Workbench
 
-**Folder:** `llm-sandbox/03-prompt-workbench/`  
+**Folder:** `llm-sandbox/04-prompt-workbench/`  
 **Goal:** Web UI to test and compare prompts across models side by side.
 
 **What you'll build:** FastAPI backend, A/B prompt comparison UI, prompt templates with variables, token/latency/cost display, SQLite for history.
@@ -117,14 +118,14 @@ Before diving in, understand the spectrum:
 
 ### Project 2.1 — LLM-Powered Dev Toolkit with Tool Use
 
-**Folder:** `llm-sandbox/04-dev-toolkit/`  
+**Folder:** `llm-sandbox/05-dev-toolkit/`  
 **Goal:** LLM assistant that can run shell commands, read/write files, search the web, and query a database.
 
 **Tech:** `openai`, `anthropic`, `httpx`, `sqlite3`
 
 ### Project 2.2 — RAG-Powered Documentation Assistant
 
-**Folder:** `llm-sandbox/05-rag-assistant/`  
+**Folder:** `llm-sandbox/06-rag-assistant/`  
 **Goal:** Ingest docs, answer questions grounded in that content, with citations.
 
 **Tech:** `chromadb`, `langchain`, `openai` or `anthropic`, `fastapi`
@@ -162,14 +163,14 @@ Before diving in, understand the spectrum:
 
 ### Project 3.1 — Research Agent with LangGraph
 
-**Folder:** `llm-sandbox/06-research-agent/`  
+**Folder:** `llm-sandbox/07-research-agent/`  
 **Goal:** Autonomous agent that searches the web, reads articles, takes notes, and produces a structured report.
 
 **Tech:** `langgraph`, `langchain`, `tavily-python`, `beautifulsoup4`, `httpx`
 
 ### Project 3.2 — Personal Coding Assistant with Persistent Memory
 
-**Folder:** `llm-sandbox/07-coding-assistant/`  
+**Folder:** `llm-sandbox/08-coding-assistant/`  
 **Goal:** Assistant that remembers your codebase, preferences, and past conversations.
 
 **Tech:** `openai` (Assistants API) or `anthropic`, `chromadb`, `sqlite3`, `tree-sitter`
@@ -205,14 +206,14 @@ Before diving in, understand the spectrum:
 
 ### Project 4.1 — AI Software Team with CrewAI
 
-**Folder:** `llm-sandbox/08-ai-dev-team/`  
+**Folder:** `llm-sandbox/09-ai-dev-team/`  
 **Goal:** PM, developer, reviewer, QA agents working together.
 
 **Tech:** `crewai`, `langchain`, provider SDKs
 
 ### Project 4.2 — Multi-Agent Customer Support System
 
-**Folder:** `llm-sandbox/09-support-system/`  
+**Folder:** `llm-sandbox/10-support-system/`  
 **Goal:** Router, FAQ, Technical, Escalation agents with shared state.
 
 **Tech:** `langgraph`, `crewai` or `autogen`, `fastapi`, `chromadb`, `sqlite`
@@ -246,14 +247,14 @@ Before diving in, understand the spectrum:
 
 ### Project 5.1 — Production RAG Platform
 
-**Folder:** `llm-sandbox/10-prod-rag-platform/`  
+**Folder:** `llm-sandbox/11-prod-rag-platform/`  
 **Goal:** RAG assistant with tracing, evaluation, caching, CI/CD.
 
 **Tech:** `fastapi`, `langfuse` or `langsmith`, `chromadb` or `qdrant`, `redis`, `docker`, `ragas`
 
 ### Project 5.2 — Deployable Multi-Agent SaaS App
 
-**Folder:** `llm-sandbox/11-agent-saas/`  
+**Folder:** `llm-sandbox/12-agent-saas/`  
 **Goal:** Complete SaaS with auth, background jobs, WebSocket streaming, admin dashboard.
 
 **Tech:** `fastapi`, `celery` or `arq`, `redis`, `postgresql`, `langgraph`, `langfuse`, `docker`
@@ -296,17 +297,24 @@ Before diving in, understand the spectrum:
 build-and-learn/
 ├── llm-sandbox/
 │   ├── 01-first-api-call/          ✅ Done
-│   ├── 02-llm-cli-tool/           Phase 1
-│   ├── 03-prompt-workbench/       Phase 1
-│   ├── 04-dev-toolkit/            Phase 2
-│   ├── 05-rag-assistant/          Phase 2
-│   ├── 06-research-agent/         Phase 3
-│   ├── 07-coding-assistant/       Phase 3
-│   ├── 08-ai-dev-team/            Phase 4
-│   ├── 09-support-system/         Phase 4
-│   ├── 10-prod-rag-platform/      Phase 5
-│   └── 11-agent-saas/             Phase 5
+│   ├── 02-parameter-playground/    ✅ Done — temperature, top_k, top_p
+│   ├── 03-llm-cli-tool/            Phase 1 (planned)
+│   ├── 04-prompt-workbench/        Phase 1 (planned)
+│   ├── 05-dev-toolkit/             Phase 2 (planned)
+│   ├── 06-rag-assistant/           Phase 2 (planned)
+│   ├── 07-research-agent/          Phase 3 (planned)
+│   ├── 08-coding-assistant/        Phase 3 (planned)
+│   ├── 09-ai-dev-team/             Phase 4 (planned)
+│   ├── 10-support-system/          Phase 4 (planned)
+│   ├── 11-prod-rag-platform/       Phase 5 (planned)
+│   └── 12-agent-saas/              Phase 5 (planned)
 ├── resources/
+│   ├── notes/                      LLM parameter notes
+│   │   ├── temperature.md
+│   │   ├── top_k.md
+│   │   ├── top_p.md
+│   │   ├── frequency_penalty.md
+│   │   └── presence_penalty.md
 │   └── python/
 │       └── ai-agents.pdf
 └── README.md
